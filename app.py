@@ -42,7 +42,6 @@ def load_llm_pipeline():
         task="text2text-generation",
         pipeline_kwargs={
             "max_new_tokens": 50,  # Control the number of generated tokens
-            "truncation": True,    # Ensure input is truncated if too long
         },
     )
     return llm_pipeline

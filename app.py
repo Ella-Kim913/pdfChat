@@ -41,7 +41,8 @@ def load_llm_pipeline():
         model_id="MBZUAI/LaMini-T5-738M",
         task="text2text-generation",
         pipeline_kwargs={
-            "max_new_tokens": 70,  # Larger token limit for generation
+            "max_length": 512,  # Adjust based on model capacity
+            # "max_new_tokens": 100,  # Larger token limit for generation
             "truncation": True,    # Ensure input is truncated if too long
         },
     )
